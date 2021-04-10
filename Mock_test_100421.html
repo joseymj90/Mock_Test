@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // option-1 remove dupicate items
+        let arr = ['a','b','c','d','e','e','f','f'];
+        newArr = [...new Set(arr)];
+        console.log(newArr);
+
+
+        // option-2 remove dupicate items
+        let arr1 = ['a','b','c','d','e','e','f','f'];
+
+        let uniqueArr = arr1.filter((item,pos) =>{
+            
+           return arr1.indexOf(item) === pos
+        
+        })
+            console.log(uniqueArr);
+
+        //program -2 change the Text
+            let str = "it was peak of summer";
+
+            let split = str.split(' ');
+           
+            rep = split[2].toUpperCase();
+            let newStr = str.replace(split[2],rep);
+            console.log(newStr);
+
+            // program-3 Check BMI for Mark and John
+
+            let johnMass = 50;
+            let markMass = 60;
+
+            let johnHeight = 5.5;
+            let markHeight = 5.9;
+
+            let johnBMI = johnMass/(johnHeight*johnHeight);
+            let markBMI = markMass/(markHeight*markHeight);
+
+            console.log(johnBMI);
+            console.log(markBMI);
+
+            let compareBMI = johnBMI < markBMI;
+
+            console.log(compareBMI);
+
+            
+
+            if(markBMI > johnBMI){
+
+                console.log('Marks BMI is higher  than john ');
+            }else{
+
+                console.log('Johns BMI is higher  than mark ');
+            }
+
+
+            // program-4 coupon code generator
+
+            function coupongenerator() {
+                var coupon = '';
+                var possible = 'abcdefghijklmnopqrstuvwxyz0123456789';
+                for (var i = 0; i < 10; i++) {
+                coupon += possible.charAt(Math.floor(Math.random() * possible.length));
+                }
+                return coupon;
+            }
+
+            console.log(coupongenerator());
+
+
+
+       
+        
+    </script>
+</body>
+</html>
